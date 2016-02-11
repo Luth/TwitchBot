@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<zones>
+  <zone>
+    <name>Moe's Tavern</name>
+    <keyword>tavern</keyword>
+    <cango>true</cango>
+    <command>drink</command>
+    <command>info</command>
+  </zone>
+  <zone>
+    <name>Blacksmith</name>
+    <keyword>blacksmith</keyword>
+    <cango>true</cango>
+    <command>shop</command>
+  </zone>
+  <zone>
+    <name>Spooky Forest</name>
+    <keyword>forest</keyword>
+    <cango>true</cango>
+    <command>adventure</command>
+  </zone>
+  <zone>
+    <name>Forest Fight</name>
+    <keyword>forestfight</keyword>
+    <cango>false</cango>
+  </zone>
+</zones>

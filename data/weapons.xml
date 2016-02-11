@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<weapons>
+  <weapon>
+    <name>bare fists</name>
+    <keyword>none</keyword>
+    <cost>0</cost>
+    <damage>1</damage>
+  </weapon>
+  <weapon>
+    <name>club</name>
+    <keyword>club</keyword>
+    <cost>50</cost>
+    <damage>3</damage>
+  </weapon>
+  <weapon>
+    <name>dagger</name>
+    <keyword>dagger</keyword>
+    <cost>60</cost>
+    <damage>4</damage>
+  </weapon>
+  <weapon>
+    <name>short sword</name>
+    <keyword>shortSword</keyword>
+    <cost>75</cost>
+    <damage>5</damage>
+  </weapon>
+  <weapon>
+    <name>mace</name>
+    <keyword>mace</keyword>
+    <cost>80</cost>
+    <damage>5</damage>
+  </weapon>
+  <weapon>
+    <name>long sword</name>
+    <keyword>longSword</keyword>
+    <cost>115</cost>
+    <damage>8</damage>
+  </weapon>
+</weapons>
