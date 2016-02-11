@@ -10,11 +10,13 @@ namespace TwitchTV {
 		private IrcClient _irc;
 		private SQLite _sqlite;
 
-		public MainBot(SQLite sqlite) {
+		public MainBot( SQLite sqlite ) {
 			_sqlite = sqlite;
 
 			_irc = new IrcClient( "irc.twitch.tv", 6667, Credentials.login, Credentials.oauth );
-			_irc.joinRoom( Credentials.login );
+			string[] rooms = Resources.rooms.Split( ',' );
+			foreach ( string room in rooms )
+				_irc.joinRoom( room.Trim() );
 			_irc.sendIrcMessage( "CAP REQ :twitch.tv/membership" );
 			_irc.sendIrcMessage( "CAP REQ :twitch.tv/commands" );
 			_irc.sendIrcMessage( "CAP REQ :twitch.tv/tags" );
@@ -44,12 +46,12 @@ namespace TwitchTV {
 		}
 
 		private void handleCommand( MessageBundle msg ) {
-			string[] parts = msg.message.Split(' ');
+			string[] parts = msg.message.Split( ' ' );
 			string cmd = parts[0];
 			string[] opts = null;
-			if(parts.Length > 1) {
-				opts = new string[parts.Length-1];
-				Array.Copy(parts, 1, opts, 0, parts.Length-1);
+			if ( parts.Length > 1 ) {
+				opts = new string[parts.Length - 1];
+				Array.Copy( parts, 1, opts, 0, parts.Length - 1 );
 			}
 			cmd = cmd.ToLower();
 			new PlayerCommand( msg.username ).chatCommand( cmd, opts );
