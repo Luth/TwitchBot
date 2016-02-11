@@ -31,7 +31,9 @@ namespace TwitchTV {
 				MessageBundle msg = _irc.parseMessage();
 				switch ( msg.type ) {
 					case MessageBundle.Type.UNKNOWN:
+#if DEBUG
 						Console.WriteLine( "Unknown: " + msg.message );
+#endif
 						break;
 					case MessageBundle.Type.JOIN:
 						Console.WriteLine( "Joined: " + msg.message );
