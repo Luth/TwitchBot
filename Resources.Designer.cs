@@ -61,6 +61,15 @@ namespace TwitchTV {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to luthbot.
+        /// </summary>
+        internal static string rooms {
+            get {
+                return ResourceManager.GetString("rooms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;weapons&gt;
         ///  &lt;weapon&gt;
@@ -98,22 +107,24 @@ namespace TwitchTV {
         ///  &lt;zone&gt;
         ///    &lt;name&gt;Moe&apos;s Tavern&lt;/name&gt;
         ///    &lt;keyword&gt;tavern&lt;/keyword&gt;
+        ///    &lt;cango&gt;true&lt;/cango&gt;
         ///    &lt;command&gt;drink&lt;/command&gt;
         ///    &lt;command&gt;info&lt;/command&gt;
         ///  &lt;/zone&gt;
         ///  &lt;zone&gt;
         ///    &lt;name&gt;Blacksmith&lt;/name&gt;
         ///    &lt;keyword&gt;blacksmith&lt;/keyword&gt;
-        ///    &lt;keyword&gt;smith&lt;/keyword&gt;
+        ///    &lt;cango&gt;true&lt;/cango&gt;
         ///    &lt;command&gt;shop&lt;/command&gt;
-        ///    &lt;command hidden=&quot;true&quot;&gt;buy&lt;/command&gt;
         ///  &lt;/zone&gt;
         ///  &lt;zone&gt;
         ///    &lt;name&gt;Spooky Forest&lt;/name&gt;
         ///    &lt;keyword&gt;forest&lt;/keyword&gt;
+        ///    &lt;cango&gt;true&lt;/cango&gt;
         ///    &lt;command&gt;adventure&lt;/command&gt;
         ///  &lt;/zone&gt;
-        ///&lt;/zones&gt;.
+        ///  &lt;zone&gt;
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string zones {
             get {
