@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="data\WeaponAttr.xml" />
     <Content Include="data\weapons.xml">
       <SubType>Designer</SubType>
     </Content>
