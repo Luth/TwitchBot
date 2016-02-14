@@ -70,12 +70,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="data\WeaponAttr.xml" />
     <Content Include="data\weapons.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="data\zones.xml">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Resources\Crafting.xml.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Credentials.resx">

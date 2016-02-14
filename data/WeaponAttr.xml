@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<weapons>
+  <weapon>
+    <name>bare fists</name>
+    <keyword>none</keyword>
+    <stat>both</stat>
+    <basedamage>1</basedamage>
+    <class>primative</class>
+  </weapon>
+  <weapon>
+    <name>wooden club</name>
+    <keyword>club</keyword>
+    <stat>str</stat>
+    <basedamage>3</basedamage>
+    <class>primative</class>
+  </weapon>
+  <weapon>
+    <name>copper knuckles</name>
+    <keyword>knuckles_copper</keyword>
+    <stat>str</stat>
+    <basedamage>4</basedamage>
+    <class>copper</class>
+  </weapon>
+  <weapon>
+    <name>copper dagger</name>
+    <keyword>dagger_copper</keyword>
+    <stat>dex</stat>
+    <basedamage>4</basedamage>
+    <class>copper</class>
+  </weapon>
+  <weapon>
+    <name>copper short sword</name>
+    <keyword>shortSword_copper</keyword>
+    <stat>dex</stat>
+    <damage>5</damage>
+    <class>copper</class>
+  </weapon>
+  <weapon>
+    <name>copper mace</name>
+    <keyword>mace_copper</keyword>
+    <stat>str</stat>
+    <damage>5</damage>
+    <class>copper</class>
+  </weapon>
+  <weapon>
+    <name>copper long sword</name>
+    <keyword>longSword_copper</keyword>
+    <stat>both</stat>
+    <damage>8</damage>
+    <class>copper</class>
+  </weapon>
+  <weapon>
+    <name>bronze knuckles</name>
+    <keyword>knuckles_bronze</keyword>
+    <stat>str</stat>
+    <basedamage>6</basedamage>
+    <class>bronze</class>
+  </weapon>
+  <weapon>
+    <name>bronze dagger</name>
+    <keyword>dagger_bronze</keyword>
+    <stat>dex</stat>
+    <basedamage>6</basedamage>
+    <class>bronze</class>
+  </weapon>
+  <weapon>
+    <name>bronze mace</name>
+    <keyword>mace_bronze</keyword>
+    <stat>str</stat>
+    <basedamage>7</basedamage>
+    <class>bronze</class>
+  </weapon>
+  <weapon>
+    <name>bronze short sword</name>
+    <keyword>shortSword_bronze</keyword>
+    <stat>dex</stat>
+    <basedamage>7</basedamage>
+    <class>bronze</class>
+  </weapon>
+  <weapon>
+    <name>bronze longsword</name>
+    <keyword>longSword_bronze</keyword>
+    <stat>both</stat>
+    <basedamage>11</basedamage>
+    <class>bronze</class>
+  </weapon>
+</weapons>
