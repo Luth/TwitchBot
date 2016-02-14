@@ -19,6 +19,9 @@ namespace TwitchTV {
 		private string _zone;
 		private string _weapon;
 		private int _diedAt;
+        private int _vit; //vitality - increase max hp
+        private int _str; //strength - increase strength based damage and equip load
+        private int _dex; //dexterity - increase dexterity based damage and evasion. Possibly other effects Flee Chance
 
 		public Player( string username ) {
 			_username = username;
@@ -55,8 +58,22 @@ namespace TwitchTV {
 		public string getWeaponId() { return _weapon; }
 
 		public int getDamage() {
+            /*pull STR and Dex to scale damage.
+             * placeholder values going in for str and dex.
+             * It is harder to balance than I thought...
+             */
 			Weapon weapon = Weapons.getWeapon( _weapon );
-			return weapon.getDamage();
+            switch (weapon.getStat())
+            {
+                case "str":
+                    return Convert.ToInt32(weapon.getDamage() + 0.5 * this._str);
+                case "dex":
+                    return Convert.ToInt32(weapon.getDamage() + 0.25 * this._dex);
+                case "both":
+                    return Convert.ToInt32(weapon.getDamage() + .25 * this._str + .125 * this._dex);
+                default:
+                    return weapon.getDamage();
+            }
 		}
 
 
@@ -66,6 +83,9 @@ namespace TwitchTV {
 			_level++;
 			_maxHp += _rand.Next( 3, 6 );
 			_hp = _maxHp;
+
+            /* need to write out the ability to level up STR DEX or VIT.
+             */
 
 			string sql = "UPDATE users SET level = " + _level + ", hp = " + _hp + ", maxHp = " + _maxHp + " WHERE username LIKE '" + _username + "'";
 			if ( _sqlite.exec( sql ) == 0 ) {
